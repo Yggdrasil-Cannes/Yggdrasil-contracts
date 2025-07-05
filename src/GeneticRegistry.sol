@@ -12,14 +12,11 @@ contract GeneticRegistry {
       hashData[userAddress][genomeHash] = treeHash;
       emit HashAddded(userAddress, genomeHash, treeHash);
     }
-    function checkAncestry(bytes32 hash1, bytes32 hash2,bytes32 proof) public {
-   }
 
    //add user validation later
    function updateTreeHash(address userAddress, bytes32 genomeHash, bytes32 treeHash) public {
      require(hashData[userAddress][genomeHash] != 0,"treeHash does not exist yet");
      hashData[userAddress][genomeHash] == treeHash;
      emit TreeHashUpdated(userAddress,treeHash);
-
    }
 } 
