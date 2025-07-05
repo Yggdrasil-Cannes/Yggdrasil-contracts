@@ -1,0 +1,14 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+
+[rpc_endpoints]
+worldchain_sepolia = "https://rpc.sepolia.worldchain.com"
+
+
+[profile.worldchain_sepolia]
+rpc_url = "${rpc_endpoints.worldchain_sepolia}"
+chain_id = 4801
